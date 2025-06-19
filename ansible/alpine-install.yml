@@ -1,0 +1,20 @@
+---
+- name: Install Nginx on Alpine Linux
+  hosts: alpine
+  become: true
+  gather_facts: true
+
+  tasks:
+    - name: Update apk repositories
+      command: apk update
+
+    - name: Install nginx
+      apk:
+        name: nginx
+        state: present
+
+    - name: Start and enable nginx
+      service:
+        name: nginx
+        state: started
+        enabled: yes
