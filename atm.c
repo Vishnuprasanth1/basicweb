@@ -26,5 +26,4 @@ int main() {
         printf("3. Withdraw\n");
         printf("4. Exit\n");
         printf("Enter your choice: ");
-        scanf("%d", &choice
-
+        scanf("%d", &choice)
